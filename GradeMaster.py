@@ -97,3 +97,13 @@ def get_course_data(system):
         return total_weight, total_credit_hours
     else:
         return total_points, total_credit_hours
+
+        
+def calculate_cwa(total_weight, total_credit_hours):
+    """
+    Calculate the Cumulative Weighted Average (CWA) to 2 decimal places.
+    Returns:
+    The calculated CWA rounded to 2 decimal places.
+    """
+    cwa = round(total_weight / total_credit_hours, 2)
+    return cwa
