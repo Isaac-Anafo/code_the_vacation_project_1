@@ -135,3 +135,23 @@ def calculate_gpa(total_points, total_credit_hours):
        """
     gpa = round(total_points / total_credit_hours, 2)
     return gpa
+
+    
+#A function that classifies the gpa into classes
+def classify_gpa(gpa):
+    """
+    Classify the Grade Point Average (GPA) into academic classes.
+    Returns:
+        The academic classification (e.g., First Class, Second Class Upper, etc.)
+    """
+    if gpa >= 3.6:
+        classification = "First Class"
+    elif gpa >= 3.0:
+        classification = "Second Class Upper"
+    elif gpa >= 2.0:
+        classification = "Second Class Lower"
+    elif gpa >= 1.0:
+        classification = "Pass"
+    else:
+        classification = "Fail"
+    return classification
