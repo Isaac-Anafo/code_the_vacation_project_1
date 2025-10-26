@@ -155,3 +155,22 @@ def classify_gpa(gpa):
     else:
         classification = "Fail"
     return classification
+
+
+def academic_report(student_name, institution_name, system, cwa, gpa):
+    """
+    Print a formatted academic report for the student.
+    Returns:
+        None
+    """
+    print("\n\n*************ACADEMIC REPORT***************")
+    print(f"Student Name:             {student_name}")
+    print(f"Institution Name:         {institution_name}")
+    print(f"Grading System:           {system}")
+    if system == 'CWA':
+        print(f"CWA:                      {cwa}")
+        print(f"Class:                    {classify_cwa(cwa)}")
+    else:
+        print(f"GPA:                      {gpa}")
+        print(f"Class:                    {classify_gpa(gpa)}")
+    print("******************************************\n")
