@@ -174,3 +174,12 @@ def academic_report(student_name, institution_name, system, cwa, gpa):
         print(f"GPA:                      {gpa}")
         print(f"Class:                    {classify_gpa(gpa)}")
     print("******************************************\n")
+
+    
+def motivational_quote():
+    """
+    Print a motivational quote to inspire the user.
+    Returns:
+        None
+    """
+    print('Reminder:\n"Success is the sum of small efforts, repeated day in and day out." - R. Collier')
