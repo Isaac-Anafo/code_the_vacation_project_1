@@ -183,3 +183,12 @@ def motivational_quote():
         None
     """
     print('Reminder:\n"Success is the sum of small efforts, repeated day in and day out." - R. Collier')
+
+    
+def thank_you():
+    """
+    Print a thank you message to the user after using the program.
+    Returns:
+        None
+    """
+    print("Thank you for using GradeMaster. Keep pushing for excellence!")
