@@ -192,3 +192,31 @@ def thank_you():
         None
     """
     print("Thank you for using GradeMaster. Keep pushing for excellence!")
+
+
+"""
+Main program execution:
+- Collects user and institution info.
+- Asks for grading system (CWA or GPA).
+- Collects course data and calculates appropriate score.
+- Displays academic report, motivational message, and thank you note.
+"""
+
+student_name, institution_name = welcome_student()
+
+system = get_grading_system()
+
+if system == 'CWA':
+    total_weight, total_credit_hours = get_course_data(system)
+    cwa = calculate_cwa(total_weight, total_credit_hours)
+    gpa = None
+else:
+    total_points, total_credit_hours = get_course_data(system)
+    gpa = calculate_gpa(total_points, total_credit_hours)
+    cwa = None
+
+academic_report(student_name, institution_name, system, cwa, gpa)
+
+motivational_quote()
+
+thank_you()
