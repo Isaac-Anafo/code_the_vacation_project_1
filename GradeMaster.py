@@ -20,3 +20,17 @@ def welcome_student():
     print("An academic report is then displayed to you for your convenient keep.")
     print("Just make sure your inputs are valid and you do follow the prompts carefully!\n")
     return student_name, institution_name
+
+def get_grading_system():
+    """
+    Prompt the user to input the grading system used by their school.
+    Continues to ask until a valid input ('CWA' or 'GPA') is provided.
+    Returns:
+        The validated grading system, either 'CWA' or 'GPA'.
+    """
+    while True:
+        system = input("What grading system does your school use? (CWA/GPA): ").strip().upper()
+        if system in ['CWA', 'GPA']:
+            return system
+        else:
+            print("\nInvalid input. Enter a correct grading system.")
