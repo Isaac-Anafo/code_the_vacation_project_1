@@ -125,3 +125,13 @@ def classify_cwa(cwa):
     else:
         classification = "Fail"
     return classification
+
+    
+def calculate_gpa(total_points, total_credit_hours):
+    """
+       Calculate the Cumulative Weighted Average (CWA) to 2 decimal places.
+       Returns:
+       The calculated GPA rounded to 2 decimal places.
+       """
+    gpa = round(total_points / total_credit_hours, 2)
+    return gpa
