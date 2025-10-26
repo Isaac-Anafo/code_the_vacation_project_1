@@ -107,3 +107,21 @@ def calculate_cwa(total_weight, total_credit_hours):
     """
     cwa = round(total_weight / total_credit_hours, 2)
     return cwa
+    
+def classify_cwa(cwa):
+    """
+    Classify the Cumulative Weighted Average (CWA) into academic classes.
+    Returns:
+        The academic classification (e.g., First Class, Second Class Upper, etc.)
+    """
+    if cwa >= 70:
+        classification = "First Class"
+    elif cwa >= 60:
+        classification = "Second Class Upper"
+    elif cwa >= 50:
+        classification = "Second Class Lower"
+    elif cwa >= 40:
+        classification = "Pass"
+    else:
+        classification = "Fail"
+    return classification
